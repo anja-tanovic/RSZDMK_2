@@ -1,5 +1,11 @@
 #include <stdio.h>
 
+void PrintResult(int res)
+{
+	printf("Result: %d\n", res);
+}
+
+
 int main()
 {
 	
@@ -10,7 +16,8 @@ int main()
 		c = a - b;		
 	else
 		c = b - a;	
-	printf("Result: %d\n", c);
+	
+	PrintResult(c);
 
 	return 0;
 }
