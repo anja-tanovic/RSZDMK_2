@@ -5,10 +5,10 @@
  * @version 1.0
  */
 
-#include "rand_mto.h"
 #include "adc_utils.h"
 #include "../pin_driver/pin.h"
 #include "../timer_0/timer0.h"
+#include "rand_otm.h"
 
 ///Makro za selektovanje kanala
 #define CHANNEL 0x03

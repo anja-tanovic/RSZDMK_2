@@ -7,19 +7,19 @@ C_SRCS += \
 ../adc_utils.c \
 ../logic_utils.c \
 ../main.c \
-../rand_mto.c 
+../rand_otm.c 
 
 OBJS += \
 ./adc_utils.o \
 ./logic_utils.o \
 ./main.o \
-./rand_mto.o 
+./rand_otm.o 
 
 C_DEPS += \
 ./adc_utils.d \
 ./logic_utils.d \
 ./main.d \
-./rand_mto.d 
+./rand_otm.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

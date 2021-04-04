@@ -5,16 +5,16 @@ D:\ANJA\Anja\3.godina\2.semestar\Razvoj softvera za digitalne mikrokontrolere\Ve
 D:\ANJA\Anja\3.godina\2.semestar\Razvoj softvera za digitalne mikrokontrolere\Vezbe\4 organizacija u biblioteke\timer_0\Release\libtimer_0.a(timer0.o)
                               ./main.o (timer0DelayMs)
 c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
-                              ./rand_mto.o (__udivmodhi4)
+                              ./rand_otm.o (__udivmodhi4)
 c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
                               c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm328p.o (exit)
 c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
-                              ./rand_mto.o (__do_clear_bss)
+                              ./rand_otm.o (__do_clear_bss)
 
 Allocating common symbols
 Common symbol       size              file
 
-current_state       0x2               ./rand_mto.o
+current_state       0x2               ./rand_otm.o
 
 Memory Configuration
 
@@ -34,7 +34,7 @@ LOAD c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.
 LOAD ./adc_utils.o
 LOAD ./logic_utils.o
 LOAD ./main.o
-LOAD ./rand_mto.o
+LOAD ./rand_otm.o
 LOAD D:\ANJA\Anja\3.godina\2.semestar\Razvoj softvera za digitalne mikrokontrolere\Vezbe\4 organizacija u biblioteke\pin_driver\Release\libpin_driver.a
 LOAD D:\ANJA\Anja\3.godina\2.semestar\Razvoj softvera za digitalne mikrokontrolere\Vezbe\4 organizacija u biblioteke\timer_0\Release\libtimer_0.a
 LOAD c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
@@ -131,7 +131,7 @@ LOAD c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0x66c
+.text           0x00000000      0x70e
  *(.vectors)
  .vectors       0x00000000       0x68 c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm328p.o
                 0x00000000                __vectors
@@ -213,7 +213,7 @@ LOAD c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.
  .text          0x00000090        0x0 ./adc_utils.o
  .text          0x00000090        0x0 ./logic_utils.o
  .text          0x00000090        0x0 ./main.o
- .text          0x00000090        0x0 ./rand_mto.o
+ .text          0x00000090        0x0 ./rand_otm.o
  .text          0x00000090        0x0 D:\ANJA\Anja\3.godina\2.semestar\Razvoj softvera za digitalne mikrokontrolere\Vezbe\4 organizacija u biblioteke\pin_driver\Release\libpin_driver.a(pin.o)
  .text          0x00000090        0x0 D:\ANJA\Anja\3.godina\2.semestar\Razvoj softvera za digitalne mikrokontrolere\Vezbe\4 organizacija u biblioteke\timer_0\Release\libtimer_0.a(timer0.o)
  .text          0x00000090        0x0 c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
@@ -272,43 +272,47 @@ LOAD c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.
                 0x000002a0                ShiftRight
  .text.main     0x000002b0       0x88 ./main.o
                 0x000002b0                main
- .text.UpdateState
-                0x00000338       0x2a ./rand_mto.o
-                0x00000338                UpdateState
  .text.InitRand
-                0x00000362       0x22 ./rand_mto.o
-                0x00000362                InitRand
- .text.GenerateNextBit
-                0x00000384       0x68 ./rand_mto.o
-                0x00000384                GenerateNextBit
- .text.Rand     0x000003ec       0x1c ./rand_mto.o
-                0x000003ec                Rand
+                0x00000338        0xa ./rand_otm.o
+                0x00000338                InitRand
+ .text.SetDirection
+                0x00000342        0x6 ./rand_otm.o
+                0x00000342                SetDirection
+ .text.GetMSB   0x00000348        0x8 ./rand_otm.o
+                0x00000348                GetMSB
+ .text.GetLSB   0x00000350        0x8 ./rand_otm.o
+                0x00000350                GetLSB
+ .text.ShiftAndToggle
+                0x00000358      0x110 ./rand_otm.o
+                0x00000358                ShiftAndToggle
+ .text.Rand     0x00000468       0x42 ./rand_otm.o
+                0x00000468                Rand
  .text.RandRange
-                0x00000408       0x32 ./rand_mto.o
-                0x00000408                RandRange
+                0x000004aa       0x32 ./rand_otm.o
+                0x000004aa                RandRange
  .text.pinSetValue
-                0x0000043a       0xa6 D:\ANJA\Anja\3.godina\2.semestar\Razvoj softvera za digitalne mikrokontrolere\Vezbe\4 organizacija u biblioteke\pin_driver\Release\libpin_driver.a(pin.o)
-                0x0000043a                pinSetValue
- .text.pinInit  0x000004e0       0xa6 D:\ANJA\Anja\3.godina\2.semestar\Razvoj softvera za digitalne mikrokontrolere\Vezbe\4 organizacija u biblioteke\pin_driver\Release\libpin_driver.a(pin.o)
-                0x000004e0                pinInit
+                0x000004dc       0xa6 D:\ANJA\Anja\3.godina\2.semestar\Razvoj softvera za digitalne mikrokontrolere\Vezbe\4 organizacija u biblioteke\pin_driver\Release\libpin_driver.a(pin.o)
+                0x000004dc                pinSetValue
+ .text.pinInit  0x00000582       0xa6 D:\ANJA\Anja\3.godina\2.semestar\Razvoj softvera za digitalne mikrokontrolere\Vezbe\4 organizacija u biblioteke\pin_driver\Release\libpin_driver.a(pin.o)
+                0x00000582                pinInit
  .text.timer0DelayMs
-                0x00000586       0x5c D:\ANJA\Anja\3.godina\2.semestar\Razvoj softvera za digitalne mikrokontrolere\Vezbe\4 organizacija u biblioteke\timer_0\Release\libtimer_0.a(timer0.o)
-                0x00000586                timer0DelayMs
+                0x00000628       0x5c D:\ANJA\Anja\3.godina\2.semestar\Razvoj softvera za digitalne mikrokontrolere\Vezbe\4 organizacija u biblioteke\timer_0\Release\libtimer_0.a(timer0.o)
+                0x00000628                timer0DelayMs
  .text.timer0InteruptInit
-                0x000005e2       0x14 D:\ANJA\Anja\3.godina\2.semestar\Razvoj softvera za digitalne mikrokontrolere\Vezbe\4 organizacija u biblioteke\timer_0\Release\libtimer_0.a(timer0.o)
-                0x000005e2                timer0InteruptInit
+                0x00000684       0x14 D:\ANJA\Anja\3.godina\2.semestar\Razvoj softvera za digitalne mikrokontrolere\Vezbe\4 organizacija u biblioteke\timer_0\Release\libtimer_0.a(timer0.o)
+                0x00000684                timer0InteruptInit
  .text.__vector_14
-                0x000005f6       0x4a D:\ANJA\Anja\3.godina\2.semestar\Razvoj softvera za digitalne mikrokontrolere\Vezbe\4 organizacija u biblioteke\timer_0\Release\libtimer_0.a(timer0.o)
-                0x000005f6                __vector_14
- .text.libgcc   0x00000640       0x28 c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
-                0x00000640                __udivmodhi4
- .text.libgcc   0x00000668        0x0 c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .text.libgcc   0x00000668        0x0 c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
-                0x00000668                . = ALIGN (0x2)
+                0x00000698       0x4a D:\ANJA\Anja\3.godina\2.semestar\Razvoj softvera za digitalne mikrokontrolere\Vezbe\4 organizacija u biblioteke\timer_0\Release\libtimer_0.a(timer0.o)
+                0x00000698                __vector_14
+ .text.libgcc   0x000006e2       0x28 c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+                0x000006e2                __udivmodhi4
+ .text.libgcc   0x0000070a        0x0 c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x0000070a        0x0 c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                0x0000070a                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00000668        0x0 c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
-                0x00000668                exit
-                0x00000668                _exit
+ .fini9         0x0000070a        0x0 c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x0000070a                exit
+                0x0000070a                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -327,18 +331,18 @@ LOAD c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00000668        0x4 c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .fini0         0x0000070a        0x4 c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x0000066c                _etext = .
+                0x0000070e                _etext = .
 
-.data           0x00800100        0x0 load address 0x0000066c
+.data           0x00800100        0x0 load address 0x0000070e
                 0x00800100                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800100        0x0 c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm328p.o
  .data          0x00800100        0x0 ./adc_utils.o
  .data          0x00800100        0x0 ./logic_utils.o
  .data          0x00800100        0x0 ./main.o
- .data          0x00800100        0x0 ./rand_mto.o
+ .data          0x00800100        0x0 ./rand_otm.o
  .data          0x00800100        0x0 D:\ANJA\Anja\3.godina\2.semestar\Razvoj softvera za digitalne mikrokontrolere\Vezbe\4 organizacija u biblioteke\pin_driver\Release\libpin_driver.a(pin.o)
  .data          0x00800100        0x0 D:\ANJA\Anja\3.godina\2.semestar\Razvoj softvera za digitalne mikrokontrolere\Vezbe\4 organizacija u biblioteke\timer_0\Release\libtimer_0.a(timer0.o)
  .data          0x00800100        0x0 c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
@@ -352,35 +356,38 @@ LOAD c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.
                 0x00800100                _edata = .
                 0x00800100                PROVIDE (__data_end, .)
 
-.bss            0x00800100        0x6
+.bss            0x00800100        0x7
                 0x00800100                PROVIDE (__bss_start, .)
  *(.bss)
  .bss           0x00800100        0x0 c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm328p.o
  .bss           0x00800100        0x0 ./adc_utils.o
  .bss           0x00800100        0x0 ./logic_utils.o
  .bss           0x00800100        0x0 ./main.o
- .bss           0x00800100        0x0 ./rand_mto.o
+ .bss           0x00800100        0x0 ./rand_otm.o
  .bss           0x00800100        0x0 D:\ANJA\Anja\3.godina\2.semestar\Razvoj softvera za digitalne mikrokontrolere\Vezbe\4 organizacija u biblioteke\pin_driver\Release\libpin_driver.a(pin.o)
  .bss           0x00800100        0x0 D:\ANJA\Anja\3.godina\2.semestar\Razvoj softvera za digitalne mikrokontrolere\Vezbe\4 organizacija u biblioteke\timer_0\Release\libtimer_0.a(timer0.o)
  .bss           0x00800100        0x0 c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
  .bss           0x00800100        0x0 c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
  .bss           0x00800100        0x0 c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
  *(.bss*)
- .bss.ms        0x00800100        0x4 D:\ANJA\Anja\3.godina\2.semestar\Razvoj softvera za digitalne mikrokontrolere\Vezbe\4 organizacija u biblioteke\timer_0\Release\libtimer_0.a(timer0.o)
-                0x00800100                ms
+ .bss.direction
+                0x00800100        0x1 ./rand_otm.o
+                0x00800100                direction
+ .bss.ms        0x00800101        0x4 D:\ANJA\Anja\3.godina\2.semestar\Razvoj softvera za digitalne mikrokontrolere\Vezbe\4 organizacija u biblioteke\timer_0\Release\libtimer_0.a(timer0.o)
+                0x00800101                ms
  *(COMMON)
- COMMON         0x00800104        0x2 ./rand_mto.o
-                0x00800104                current_state
-                0x00800106                PROVIDE (__bss_end, .)
-                0x0000066c                __data_load_start = LOADADDR (.data)
-                0x0000066c                __data_load_end = (__data_load_start + SIZEOF (.data))
+ COMMON         0x00800105        0x2 ./rand_otm.o
+                0x00800105                current_state
+                0x00800107                PROVIDE (__bss_end, .)
+                0x0000070e                __data_load_start = LOADADDR (.data)
+                0x0000070e                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x00800106        0x0
-                0x00800106                PROVIDE (__noinit_start, .)
+.noinit         0x00800107        0x0
+                0x00800107                PROVIDE (__noinit_start, .)
  *(.noinit*)
-                0x00800106                PROVIDE (__noinit_end, .)
-                0x00800106                _end = .
-                0x00800106                PROVIDE (__heap_start, .)
+                0x00800107                PROVIDE (__noinit_end, .)
+                0x00800107                _end = .
+                0x00800107                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
  *(.eeprom*)
